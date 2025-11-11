@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Classroom Attendance System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Smart Classroom Attendance System</h1>
+    <nav id="navBar" style="display:none;">
+      <a href="#" onclick="showSection('home')">🏠 Home</a>
+      <a href="#" onclick="showSection('students')">👨‍🎓 Students</a>
+      <a href="#" onclick="showSection('attendance')">📝 Mark Attendance</a>
+      <a href="#" onclick="showSection('summary')">📊 Summary</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- LOGIN -->
+    <section id="login" class="active">
+      <h2>🔐 Teacher Login</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Enter username" required /><br /><br />
+        <input type="password" id="password" placeholder="Enter password" required /><br /><br />
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- HOME -->
+    <section id="home">
+      <h2>Welcome, Teacher 👩‍🏫</h2>
+      <p>Manage your students and attendance efficiently with this system.</p>
+    </section>
+
+    <!-- STUDENTS -->
+    <section id="students">
+      <h2>👨‍🎓 Add or Delete Students</h2>
+      <form id="studentForm">
+        <input type="text" id="studentName" placeholder="Enter student name" required />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="studentList"></ul>
+    </section>
+
+    <!-- ATTENDANCE -->
+    <section id="attendance">
+      <h2>📝 Mark Attendance</h2>
+      <div id="attendanceArea" class="attendance-grid"></div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section id="summary">
+      <h2>📊 Attendance Summary</h2>
+      <table id="summaryTable">
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Present</th>
+            <th>Absent</th>
+            <th>Attendance %</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  <footer>
+    <p>© 2025 Smart Classroom | Designed by Rithesh</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
